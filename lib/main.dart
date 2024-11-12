@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:jadwal_pelajaran_app/Authtentication/signup.dart';
 
 void main() async {
   await initializeDateFormatting('id_ID', null);
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SignUp(),
     );
   }
 }

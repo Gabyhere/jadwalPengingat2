@@ -117,7 +117,7 @@ class _SignUpState extends State<SignUp> {
                         if (value!.isEmpty) {
                           return "password is required";
                         } else if (password.text != confirmPassword.text) {
-                          return "Passwords dont match";
+                          return "Passwords don't match";
                         }
                         return null;
                       },

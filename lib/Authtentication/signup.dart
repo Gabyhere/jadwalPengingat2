@@ -22,7 +22,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //SingleChildScrollView to have an scrol in the screen
+      //SingleChildScrollView to have an scroll in the screen
       body: Center(
         child: SingleChildScrollView(
           child: Form(
@@ -38,7 +38,7 @@ class _SignUpState extends State<SignUp> {
                     title: Text(
                       "Register New Account",
                       style:
-                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                      TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                     ),
                   ),
 
@@ -47,7 +47,7 @@ class _SignUpState extends State<SignUp> {
                   Container(
                     margin: EdgeInsets.all(8),
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple.withOpacity(.2)),
@@ -71,7 +71,7 @@ class _SignUpState extends State<SignUp> {
                   Container(
                     margin: const EdgeInsets.all(8),
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple.withOpacity(.2)),
@@ -107,7 +107,7 @@ class _SignUpState extends State<SignUp> {
                   Container(
                     margin: const EdgeInsets.all(8),
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple.withOpacity(.2)),
@@ -156,15 +156,15 @@ class _SignUpState extends State<SignUp> {
                             final db = DatabaseHelper();
                             db
                                 .signup(Users(
-                                    usrName: username.text,
-                                    usrPassword: password.text))
+                                usrName: username.text,
+                                usrPassword: password.text))
                                 .whenComplete(() {
                               //After success user creation go to login screen
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const LoginScreen()));
+                                      const LoginScreen()));
                             });
                           }
                         },

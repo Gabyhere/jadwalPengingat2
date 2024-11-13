@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:jadwal_pelajaran_app/Authtentication/signup.dart';
 import 'package:jadwal_pelajaran_app/JsonModels/users.dart';
 import 'package:jadwal_pelajaran_app/SQLite/sqlite.dart';
-import 'package:jadwal_pelajaran_app/Views/notes.dart';
 import 'package:jadwal_pelajaran_app/pages/home_page.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -35,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
       //If login is correct, then goto notes
       if (!mounted) return;
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Notes()));
+          context, MaterialPageRoute(builder: (context) => const HomePage()));
     } else {
       //If not, true the bool value to show error message
       setState(() {
@@ -69,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     margin: const EdgeInsets.all(8),
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple.withOpacity(.2)),
@@ -93,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Container(
                     margin: const EdgeInsets.all(8),
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.deepPurple.withOpacity(.2)),
@@ -137,10 +136,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           if (formKey.currentState!.validate()) {
                             //Login method will be here
                             login();
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(builder: (context) => HomePage()),
-                            );
 
                             //Now we have a response from our sqlite method
                             //We are going to create a user
@@ -172,9 +167,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   // We will disable this message in default, when user and pass is incorrect we will trigger this message to user
                   isLoginTrue
                       ? const Text(
-                          "Username or password is incorrect",
-                          style: TextStyle(color: Colors.red),
-                        )
+                    "Username or passowrd is incorrect",
+                    style: TextStyle(color: Colors.red),
+                  )
                       : const SizedBox(),
                 ],
               ),

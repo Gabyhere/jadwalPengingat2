@@ -125,7 +125,7 @@ class _SignUpState extends State<SignUp> {
                       decoration: InputDecoration(
                           icon: const Icon(Icons.lock),
                           border: InputBorder.none,
-                          hintText: "Konfirmasi Password",
+                          hintText: " Konfirmasi Password",
                           suffixIcon: IconButton(
                               onPressed: () {
                                 //In here we will create a click to show and hide the password a toggle button
